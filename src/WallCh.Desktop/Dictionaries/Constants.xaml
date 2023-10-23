@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Font Size -->    
+    <sys:Double x:Key="Heading6">11</sys:Double>
+    <sys:Double x:Key="Heading5">14</sys:Double>
+    <sys:Double x:Key="Heading4">16</sys:Double>
+    <sys:Double x:Key="Heading3">18</sys:Double>
+    <sys:Double x:Key="Heading2">20</sys:Double>
+    <sys:Double x:Key="Heading1">24</sys:Double>
+
+    <!-- Dark Colors -->
+    <SolidColorBrush x:Key="Dark1" Color="#352F44" />
+    <SolidColorBrush x:Key="Dark2" Color="#5C5470" />
+
+    <!-- Light Colors -->
+    <SolidColorBrush x:Key="Light1" Color="#B9B4C7" />
+    <SolidColorBrush x:Key="Light2" Color="#FAF0E6" />
+
+    <!-- Common Colors -->
+    <SolidColorBrush x:Key="Transparent" Color="Transparent" />
+    <SolidColorBrush x:Key="Red" Color="#ff0000" />
+
+</ResourceDictionary>

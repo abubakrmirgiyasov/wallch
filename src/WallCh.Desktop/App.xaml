@@ -1,9 +1,29 @@
 ﻿<Application x:Class="WallCh.Desktop.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:WallCh.Desktop"
-             StartupUri="MainWindow.xaml">
+             xmlns:local="clr-namespace:WallCh.Desktop">
     <Application.Resources>
-         
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                
+                <!-- Commons -->
+                <ResourceDictionary Source="Dictionaries/Constants.xaml" />
+                
+                <!-- Themes --> 
+                <ResourceDictionary Source="Dictionaries/Themes/Dark.xaml" />
+                
+                <!-- Fonts -->
+                <ResourceDictionary Source="Dictionaries/Fonts/Exo.xaml" />
+                <ResourceDictionary Source="Dictionaries/Fonts/Nosifer.xaml" />
+                <ResourceDictionary Source="Dictionaries/Fonts/Ops.xaml" />
+                <ResourceDictionary Source="Dictionaries/Fonts/Pixelify.xaml" />
+                
+                <!-- Components -->
+                <ResourceDictionary Source="Dictionaries/Components/Buttons.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        
     </Application.Resources>
 </Application>

@@ -11,4 +11,13 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resources\Fonts\Exo\" />
+    <Folder Include="Resources\Fonts\Ops\" />
+    <Folder Include="Resources\Fonts\Pixelify\" />
+    <Folder Include="Resources\Fonts\Nosifer\" />
+    <Folder Include="Resources\Icos\" />
+    <Folder Include="Common\" />
+  </ItemGroup>
+
 </Project>

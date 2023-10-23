@@ -10,16 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WallCh.Desktop;
+namespace WallCh.Desktop.Components.Notifications;
 /// <summary>
-/// Interaction logic for MainWindow.xaml
+/// Логика взаимодействия для Error.xaml
 /// </summary>
-public partial class MainWindow : Window
+public partial class Error : Window
 {
-    public MainWindow()
+    public Error()
     {
         InitializeComponent();
     }

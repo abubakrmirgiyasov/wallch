@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <FontFamily x:Key="ExoBold">../../Resources/Fonts/Exo/#Exo2-Bold</FontFamily>
+    <FontFamily x:Key="ExoLight">../../Resources/Fonts/Exo/#Exo2-Light</FontFamily>
+    <FontFamily x:Key="ExoRegular">../../Resources/Fonts/Exo/#Exo2-Regular</FontFamily>
+    
+</ResourceDictionary>
