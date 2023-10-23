@@ -1,9 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <FontFamily x:Key="PixelifyBold">../../Resources/Fonts/Pixelify/#PixelifySans-Bold</FontFamily>
-    <FontFamily x:Key="PixelifyMedium">../../Resources/Fonts/Pixelify/#PixelifySans-Medium</FontFamily>
-    <FontFamily x:Key="PixelifyRegular">../../Resources/Fonts/Pixelify/#PixelifySans-Regular</FontFamily>
-    <FontFamily x:Key="PixelifySemiBold">../../Resources/Fonts/Pixelify/#PixelifySans-SemiBold</FontFamily>
+    <FontFamily x:Key="PixelifyBold">../../Resources/Fonts/Pixelify/PixelifySans-Bold.ttf #Pixelify Sans</FontFamily>
+    <FontFamily x:Key="PixelifyMedium">../../Resources/Fonts/Pixelify/PixelifySans-Medium.ttf #Pixelify Sans Medium</FontFamily>
+    <FontFamily x:Key="PixelifyRegular">../../Resources/Fonts/Pixelify/PixelifySans-Regular.ttf #Pixelify Sans</FontFamily>
+    <FontFamily x:Key="PixelifySemiBold">../../Resources/Fonts/Pixelify/PixelifySans-SemiBold.ttf #Pixelify Sans SemiBold</FontFamily>
 
 </ResourceDictionary>

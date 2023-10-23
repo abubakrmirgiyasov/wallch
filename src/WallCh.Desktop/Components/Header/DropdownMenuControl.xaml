@@ -12,16 +12,27 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="15" />
+            <RowDefinition Height="15" />
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
-            <RowDefinition />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="15" />
         </Grid.RowDefinitions>
 
+        <!-- Welcome Text -->
         <StackPanel Grid.ColumnSpan="2"
                     Grid.Row="0">
             <TextBlock Text="test" 
                        FontSize="{StaticResource Heading6}"/>
+        </StackPanel>
+        
+        <!-- Separator -->
+        <StackPanel Grid.ColumnSpan="2"
+                    Grid.Row="5">
+            <Rectangle Height="3"
+                       Fill="{StaticResource Dark2}"
+                       Margin="1" />
         </StackPanel>
         
     </Grid>

@@ -54,4 +54,9 @@ public partial class Main : Window
             _isDropDownMenuOpened = false;
         }
     }
+
+    private void OnHeaderBorder(object sender, MouseButtonEventArgs e)
+    {
+        if (e.LeftButton == MouseButtonState.Pressed) DragMove();
+    }
 }

@@ -48,7 +48,8 @@
                     Margin="10, 10, 10, 0">
             <TextBlock Text="WallCH"
                        FontSize="{StaticResource Heading1}"
-                       Foreground="{StaticResource Light1}" />
+                       Foreground="{StaticResource Light1}"
+                       FontFamily="{StaticResource NosiferRegular}" />
         </StackPanel>
         
         <!-- Logo Image -->
@@ -73,6 +74,10 @@
                          BorderBrush="{StaticResource Transparent}"
                          x:Name="Loader_P"
                          Value="75" />
+            <TextBlock Text="Loading ..."
+                       FontFamily="{StaticResource Ops}" 
+                       Foreground="{StaticResource Light1}"
+                       Margin="0, 5, 0, 0" />
         </StackPanel>
 
         <!-- Main Text -->
@@ -85,7 +90,8 @@
                        VerticalAlignment="Center"
                        TextAlignment="Center" 
                        Foreground="{StaticResource Light1}"
-                       x:Name="Text_T" />
+                       x:Name="Text_T"
+                       FontFamily="{StaticResource ExoRegular}" />
         </StackPanel>
     </Grid>
 </Window>
