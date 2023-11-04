@@ -10,30 +10,7 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None">
-
-    <Window.Resources>
-        <Style TargetType="Grid">
-            <Setter Property="Background">
-                <Setter.Value>
-                    <LinearGradientBrush>
-                        <GradientStop Color="#3f5efb" Offset="0"/>
-                        <GradientStop Color="#fc466b" Offset="1"/>
-                    </LinearGradientBrush>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style TargetType="ProgressBar">
-            <Setter Property="Background">
-                <Setter.Value>
-                    <LinearGradientBrush>
-                        <GradientStop Color="#3f5efb" Offset="1"/>
-                    </LinearGradientBrush>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
-
-    <Grid>
+    <Grid Style="{StaticResource SplashScreenGrid}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
@@ -70,8 +47,7 @@
                          Width="600"
                          VerticalAlignment="Bottom"
                          HorizontalAlignment="Center" 
-                         Foreground="{StaticResource Dark2}"
-                         BorderBrush="{StaticResource Transparent}"
+                         Style="{StaticResource ProgressBar}"
                          x:Name="Loader_P"
                          Value="75" />
             <TextBlock Text="Loading ..."

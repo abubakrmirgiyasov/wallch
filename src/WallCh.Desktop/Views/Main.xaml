@@ -10,7 +10,8 @@
         ResizeMode="NoResize"
         WindowStyle="None"
         MinHeight="400" MinWidth="400"
-        x:Name="Main_W">
+        x:Name="Main_W"
+        MouseLeftButtonDown="OnWindowMouseLeftDown">
     <Grid x:Name="Main_G">
 
         <Grid.RowDefinitions>
@@ -45,7 +46,7 @@
                            HorizontalAlignment="Left" 
                            VerticalAlignment="Center" />
                     <TextBlock Text="WallCH"
-                               FontSize="22"
+                               FontSize="{StaticResource Heading3}"
                                FontFamily="{StaticResource NosiferRegular}"
                                Foreground="{StaticResource Dark2}"
                                HorizontalAlignment="Left"
@@ -70,7 +71,8 @@
                         <Button Content="🗗" 
                                 Grid.Column="0"
                                 Margin="0, 0, 30, 0"
-                                Click="OnDropdownMenu_Click"/>
+                                Click="OnDropdownMenu_Click"
+                                Style="{StaticResource TransparentButton}" />
                         <Button Content="🗕" 
                                 Grid.Column="1"
                                 x:Name="Minimize_B"
@@ -92,6 +94,15 @@
             </Grid>
         </Border>
 
+        <Border Background="Aqua"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="1"
+                Grid.RowSpan="2">
+            <Frame NavigationUIVisibility="Hidden"
+                   Source="/Pages/Home.xaml" />
+        </Border>
+        
         <!-- Footer -->
         <Border Grid.Column="0"
                 Grid.Row="3"
@@ -116,7 +127,6 @@
                                Foreground="{StaticResource Dark2}"
                                Margin="5, 0, 0, 0"
                                VerticalAlignment="Center" />
-
                 </Grid>
             </StackPanel>
         </Border>

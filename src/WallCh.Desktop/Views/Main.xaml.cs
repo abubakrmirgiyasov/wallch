@@ -1,28 +1,32 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using WallCh.Desktop.Components.Header;
 using WallCh.Desktop.Helpers;
+using WallCh.Middleware.Managers.Interfaces;
 
 namespace WallCh.Desktop;
 
 public partial class Main : Window
 {
     private readonly DropdownMenuControl _dropdownMenu;
+    private readonly IUserManager _userManager;
     private bool _isDropDownMenuOpened = false;
 
-    public Main(DropdownMenuControl dropdownMenu)
+    public Main(DropdownMenuControl dropdownMenu, IUserManager userManager)
     {
         InitializeComponent();
 
         _dropdownMenu = dropdownMenu;
+        _userManager = userManager;
 
         this.Init();
     }
 
     private void OnLogoText_Click(object sender, MouseButtonEventArgs e)
     {
-
+        var test = _userManager.Get();
     }
 
     private void OnExitButton_Click(object sender, RoutedEventArgs e)
@@ -44,13 +48,18 @@ public partial class Main : Window
     {
         if (!_isDropDownMenuOpened)
         {
-            Main_G.Children.Add(_dropdownMenu);
-            _dropdownMenu.PointFromScreen(new Point(1500, 550));
+            var pos = Mouse.GetPosition(Main_W);
+                        
+            _dropdownMenu.Owner = this;
+            _dropdownMenu.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            _dropdownMenu.Top = pos.Y;
+            _dropdownMenu.Left = pos.X;
+            _dropdownMenu.Show();
             _isDropDownMenuOpened = true;
         }
         else
         {
-            Main_G.Children.Remove(_dropdownMenu);
+            _dropdownMenu.Hide();
             _isDropDownMenuOpened = false;
         }
     }
@@ -58,5 +67,14 @@ public partial class Main : Window
     private void OnHeaderBorder(object sender, MouseButtonEventArgs e)
     {
         if (e.LeftButton == MouseButtonState.Pressed) DragMove();
+    }
+
+    private void OnWindowMouseLeftDown(object sender, MouseButtonEventArgs e)
+    {
+        if (_isDropDownMenuOpened)
+        {
+            _dropdownMenu.Hide();
+            _isDropDownMenuOpened = false;
+        }
     }
 }

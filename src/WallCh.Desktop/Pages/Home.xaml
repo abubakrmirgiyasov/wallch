@@ -9,6 +9,8 @@
       Title="Home">
 
     <Grid>
-        
+        <TextBlock Margin="375,212,375,208">
+            Home
+        </TextBlock>
     </Grid>
 </Page>

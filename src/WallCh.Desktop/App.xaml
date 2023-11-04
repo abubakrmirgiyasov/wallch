@@ -9,7 +9,8 @@
                 
                 <!-- Commons -->
                 <ResourceDictionary Source="Dictionaries/Constants.xaml" />
-                
+                <ResourceDictionary Source="Dictionaries/Components/Common.xaml" />
+
                 <!-- Themes --> 
                 <ResourceDictionary Source="Dictionaries/Themes/Dark.xaml" />
                 

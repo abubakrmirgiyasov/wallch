@@ -2,6 +2,8 @@
 using Microsoft.Extensions.Hosting;
 using System.Windows;
 using WallCh.Desktop.Components.Header;
+using WallCh.Middleware.Managers;
+using WallCh.Middleware.Managers.Interfaces;
 
 namespace WallCh.Desktop;
 
@@ -19,6 +21,8 @@ public partial class App : Application
             {
                 services.AddSingleton<Main>();
                 services.AddSingleton<DropdownMenuControl>();
+
+                services.AddScoped<IUserManager, UserManager>();
             })
             .Build();
     }
