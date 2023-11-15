@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Hosting;
 using System.Windows;
 using WallCh.Desktop.Components.Header;
+using WallCh.Desktop.Components.Notifications;
 using WallCh.Middleware.Managers;
 using WallCh.Middleware.Managers.Interfaces;
 
@@ -21,6 +22,7 @@ public partial class App : Application
             {
                 services.AddSingleton<Main>();
                 services.AddSingleton<DropdownMenuControl>();
+                services.AddSingleton<Notification>();
 
                 services.AddScoped<IUserManager, UserManager>();
             })

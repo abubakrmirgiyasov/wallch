@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Height="450" Width="800"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize"
+        ResizeMode="CanResize"
         WindowStyle="None"
         MinHeight="400" MinWidth="400"
         x:Name="Main_W"
@@ -16,7 +16,7 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
-            <RowDefinition />
+            <RowDefinition Height="30" />
             <RowDefinition />
             <RowDefinition Height="20" />
         </Grid.RowDefinitions>
@@ -30,6 +30,8 @@
         <Border Grid.Row="0"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
+                BorderBrush="{StaticResource Dark1}"
+                BorderThickness="0 0 0 2"
                 MouseDown="OnHeaderBorder">
             <Grid>
 
@@ -37,7 +39,7 @@
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                
+
                 <!-- Title -->
                 <StackPanel Grid.Column="0">
                     <Image Source="{StaticResource DarkThemeLogo}"
@@ -94,15 +96,61 @@
             </Grid>
         </Border>
 
-        <Border Background="Aqua"
-                Grid.Column="0"
+        <Border Grid.Row="1"
+                Grid.ColumnSpan="3">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="2"
+                                  ShadowDepth="1" 
+                                  Opacity="0.4" />
+            </Border.Effect>
+
+            <Grid Margin="90, 0, 90, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Главная"
+                               TextDecorations="Underline"
+                               Foreground="{StaticResource Success}"
+                               Margin="0, 0, 20, 0"
+                               Style="{StaticResource LinkedTextBlock}" />
+                    <TextBlock Text="Программы"
+                               Margin="0, 0, 20, 0"
+                               Style="{StaticResource LinkedTextBlock}" />
+                    <TextBlock Text="Обои" 
+                               Margin="0, 0, 20, 0"
+                               Style="{StaticResource LinkedTextBlock}" />
+                    <TextBlock Text="О Нас" 
+                               Margin="0, 0, 20, 0"
+                               Style="{StaticResource LinkedTextBlock}" />
+                </StackPanel>
+
+                <StackPanel Grid.Column="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Orientation="Horizontal">
+                    <TextBox Background="{StaticResource Dark2}"
+                             Text="Введите запрос" 
+                             Width="220"
+                             Height="24"
+                             Style="{StaticResource SearchTextBox}"
+                             LostFocus="OnSearchBox_LostFocus" 
+                             GotFocus="OnSearchBox_GotFocus" />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Column="0" Background="Aqua"
                 Grid.ColumnSpan="3"
-                Grid.Row="1"
-                Grid.RowSpan="2">
+                Grid.Row="2"
+                Grid.RowSpan="1">
             <Frame NavigationUIVisibility="Hidden"
                    Source="/Pages/Home.xaml" />
         </Border>
-        
+
         <!-- Footer -->
         <Border Grid.Column="0"
                 Grid.Row="3"
@@ -116,12 +164,16 @@
                     </Grid.ColumnDefinitions>
 
                     <ProgressBar Grid.Column="0"
+                                 Name="Loading_PB"
                                  Height="15"
                                  VerticalAlignment="Center" 
-                                 Value="45" 
+                                 Value="0" 
+                                 IsIndeterminate="False"
+                                 Style="{StaticResource ProgressBar}"
                                  Margin="5, 3, 0, 0" />
 
                     <TextBlock Text="Loading..."
+                               Name="FooterText_TB"
                                Grid.Column="1"
                                FontFamily="{StaticResource ExoBold}"
                                Foreground="{StaticResource Dark2}"
@@ -130,6 +182,6 @@
                 </Grid>
             </StackPanel>
         </Border>
-        
+
     </Grid>
 </Window>

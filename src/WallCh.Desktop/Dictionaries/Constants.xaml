@@ -21,5 +21,6 @@
     <!-- Common Colors -->
     <SolidColorBrush x:Key="Transparent" Color="Transparent" />
     <SolidColorBrush x:Key="Red" Color="#ff0000" />
+    <SolidColorBrush x:Key="Success" Color="#0AB39C" />
 
 </ResourceDictionary>

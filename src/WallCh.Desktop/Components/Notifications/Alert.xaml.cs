@@ -12,14 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WallCh.Desktop.Components.Notifications;
-/// <summary>
-/// Логика взаимодействия для Error.xaml
-/// </summary>
-public partial class Error : Window
+namespace WallCh.Desktop.Components.Notifications
 {
-    public Error()
+    /// <summary>
+    /// Логика взаимодействия для Alert.xaml
+    /// </summary>
+    public partial class Alert : Window
     {
-        InitializeComponent();
+        public Alert()
+        {
+            InitializeComponent();
+        }
     }
 }

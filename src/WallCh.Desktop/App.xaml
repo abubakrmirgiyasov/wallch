@@ -22,6 +22,7 @@
                 
                 <!-- Components -->
                 <ResourceDictionary Source="Dictionaries/Components/Buttons.xaml" />
+                <ResourceDictionary Source="Dictionaries/Components/SearchBox.xaml" />
 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
